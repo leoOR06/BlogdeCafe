@@ -6,6 +6,7 @@
     --primario:#784D3C;
     --blanco:#FFFF;
     --negro:#000000;
+    --gris:#e1e1e1;
 }
 
 html{
@@ -139,4 +140,48 @@ img{
     color: var(--blanco);
 }
 
+/** Blog**/
+@media(min-width:768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns:2fr 1fr ;
+        /** De tres partes la primer parte doma dos partes y la segunda toma una**/
+        column-gap: 4rem;
+    }
+}
 
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem; /** Parq que se note el borde porque si no se pone, el borde se confunde con la parte superior de la imagen**/
+
+}
+
+
+.entrada:last-of-type{ /**se usa para seleccionar los estilos de**/
+   /** abajo solo al último elemento con la clase  de entrada**/
+    border: none;
+    margin-bottom: 0;
+}
+
+/**boton**/
+.boton{
+    display: block; /**para que en un disp movil tome todo el espacio disponible**/
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem; /**para que se separe del borde de la imagen, ya que lo tapaba**/
+}
+
+@media (min-width:768px) {
+    .boton{
+        display: inline-block;/** inline son inmune al margin y al width**/
+        /** por eso se usa inline-block**/
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
