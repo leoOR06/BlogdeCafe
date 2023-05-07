@@ -178,6 +178,7 @@ img{
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem; /**para que se separe del borde de la imagen, ya que lo tapaba**/
+    border: none;
 }
 
 @media (min-width:768px) {
@@ -185,6 +186,10 @@ img{
         display: inline-block;/** inline son inmune al margin y al width**/
         /** por eso se usa inline-block**/
     }
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton--primario{
@@ -287,3 +292,43 @@ padding-bottom:3rem ;
 .widget-curso__info{
     font-size: 2rem;
 }
+
+/** contacto **/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height:40rem ; /**Si no se especifica la altura no se mostrara**/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**Formulario*/
+.formulario{
+ background-color: var(--blanco);
+ margin: -5rem auto 0 auto;/**se pone negativo para que se suba hacía la imagen de fondo**/
+ width: 95%; /*par auq eno ocupe todo el ancho de la imagen**/
+ padding: 5rem; /**para que tenga mas espacio entre el borde del for y los elementos dentro de el**/
+}
+
+.campo{
+display: flex;
+margin-bottom:2rem; /**Separación entre campos **/
+}
+
+.campo__label{
+flex: 0 0 8rem;
+/** 0 y 0 hace que no crezca ni se haga pequeño, pero su valor base será de 9 rem, seja fijo el tamaño de los label**/
+text-align: right;
+padding-right: 2rem;
+}
+
+.campo__field{
+flex: 1;
+/**se le da un factor de crecimiento de 1, como el ,abel no tiene factor de crecimeinto, entonces por cada 0 pixeles que recibe el label, el input va a recibir un pixel **/
+/** entonces tomara todos los pixeles que haya disponibles**/
+border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+height: 200px;
+}
+
