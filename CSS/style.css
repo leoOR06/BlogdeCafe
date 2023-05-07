@@ -221,9 +221,69 @@ img{
     font-weight: normal;
 }
 
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+
 .footer{
 background-color: var(--negro);
 padding: 3rem 0;
 margin-top: 4rem;/** separar el footer de los elementos del contenido principal**/
 padding-bottom:3rem ;
+}
+
+/**sobre nosotros**/
+
+@media(min-width:768px){
+    .sobre-nosotros{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .sobre-nosotros__texto,
+    .sobre-nosotros__imagen{
+        flex-basis: 50%;/** es el width cuando se usa flex box**/
+    }
+
+    /** es lo mismo que es  siguiente código**/
+    /*.sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }*/
+
+}
+
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media(min-width:768px){/** Colocar la imagen a la izquierda y el texto a la derecha*/
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type{
+    border: none;
+}
+
+
+/** cursos**/
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+
+.widget-curso__info{
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
 }
